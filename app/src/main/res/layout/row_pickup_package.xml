@@ -1,0 +1,124 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dp5"
+    android:background="@color/white"
+    card_view:cardElevation="2sp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:padding="@dimen/dp5">
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Madhav"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_15" />
+
+                <TextView
+                    android:id="@+id/actualprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_name"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:drawableLeft="@drawable/rupeecut"
+                    android:maxLines="2"
+                    android:text=" nj"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/actualprice"
+                    android:layout_alignBottom="@+id/actualprice"
+                    android:layout_toEndOf="@+id/actualprice"
+                    android:layout_toRightOf="@+id/actualprice"
+                    android:maxLines="2"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text=" nj"
+                    android:textColor="@color/offer_color"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dicountprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/actualprice"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:drawableLeft="@drawable/rupee"
+                    android:text="fdsf"
+                    android:textColor="@color/textcolordark"
+                    android:textSize="@dimen/text_size_11"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/specialoffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dicountprice"
+                    android:layout_marginTop="@dimen/dp5"
+
+                    android:text="Offers"
+                    android:textColor="@color/offer_color"
+
+                    android:textSize="@dimen/text_size_11"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/specialoffertext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dicountprice"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_toRightOf="@+id/specialoffer"
+                    android:paddingLeft="@dimen/dp10"
+
+                    android:text="Special Price"
+                    android:textColor="@color/textcolordark"
+                    android:textSize="@dimen/text_size_11" />
+
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
