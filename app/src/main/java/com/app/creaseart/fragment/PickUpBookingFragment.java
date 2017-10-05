@@ -39,7 +39,7 @@ public class PickUpBookingFragment extends BaseFragment implements View.OnClickL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.vendor_booking_fragment, container, false);
+        view = inflater.inflate(R.layout.pickupboy_booking_fragment, container, false);
         mActivity = getActivity();
         userBookingFragment = this;
         initViews();
