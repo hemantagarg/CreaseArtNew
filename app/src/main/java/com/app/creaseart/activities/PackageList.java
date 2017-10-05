@@ -469,14 +469,11 @@ public class PackageList extends AppCompatActivity implements ApiResponse, OnCus
 
 
     private void getServicelistRefresh() {
-        Dashboard.getInstance().setProgressLoader(true);
         try {
-            skipCount = 0;
+            mSwipeRefreshLayout.setRefreshing(true);
             if (AppUtils.isNetworkAvailable(context)) {
-
                 String url = JsonApiHelper.BASEURL + JsonApiHelper.PACKAGES;
                 new CommonAsyncTaskHashmap(1, context, this).getqueryJsonbject(url, null, Request.Method.GET);
-
             } else {
                 Toast.makeText(context, context.getResources().getString(R.string.message_network_problem), Toast.LENGTH_SHORT).show();
             }
@@ -508,7 +505,7 @@ public class PackageList extends AppCompatActivity implements ApiResponse, OnCus
     public void onPostSuccess(int position, JSONObject jObject) {
         try {
             if (position == 1) {
-                Dashboard.getInstance().setProgressLoader(false);
+
                 JSONObject commandResult = jObject.getJSONObject("commandResult");
 
                 if (commandResult.getString("success").equalsIgnoreCase("1")) {
@@ -542,9 +539,11 @@ public class PackageList extends AppCompatActivity implements ApiResponse, OnCus
                     }
 
                 } else {
+                    Toast.makeText(context, commandResult.getString("message"), Toast.LENGTH_SHORT).show();
                     if (mSwipeRefreshLayout != null) {
                         mSwipeRefreshLayout.setRefreshing(false);
                     }
+
                 }
 
             } else if (position == 11) {

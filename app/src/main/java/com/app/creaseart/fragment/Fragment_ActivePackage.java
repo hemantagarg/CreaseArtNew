@@ -152,7 +152,7 @@ public class Fragment_ActivePackage extends BaseFragment implements ApiResponse,
 
 
     private void getServicelistRefresh() {
-        Dashboard.getInstance().setProgressLoader(true);
+        mSwipeRefreshLayout.setRefreshing(true);
         try {
             skipCount = 0;
             if (AppUtils.isNetworkAvailable(context)) {
@@ -204,6 +204,7 @@ public class Fragment_ActivePackage extends BaseFragment implements ApiResponse,
                     }
 
                 } else {
+                    Toast.makeText(context, commandResult.getString("message"), Toast.LENGTH_SHORT).show();
                     if (mSwipeRefreshLayout != null) {
                         mSwipeRefreshLayout.setRefreshing(false);
                     }
